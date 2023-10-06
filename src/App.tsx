@@ -1,8 +1,11 @@
-import Button from './libs/Button.tsx'
+import Home from './pages/home.tsx';
+import { PrcConfigProvider } from './remocollab/prc-base/PrcConfigProvider.tsx';
 const App = () => {
-  return <div>
-    <Button name={'hihao'}></Button>
-  </div>
-}
+  return (
+    <PrcConfigProvider>
+      <Home />
+    </PrcConfigProvider>
+  );
+};
 
-export default App
+export default App;
